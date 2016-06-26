@@ -1,0 +1,15 @@
+
+
+{% if latest_event_list %}
+    <table style="width:100%">
+    {% for event in latest_event_list %}
+        <tr>
+            <td>{{ event.kind.kindDescription }}</td>
+            <td>{{ event.user.userFirstName }}</td>
+            <td>{{ event.event_date }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
